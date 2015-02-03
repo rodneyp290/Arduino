@@ -1,7 +1,10 @@
-//TODO: Add Comments use more descriptive names
-const int rOut = 11;
+/* Arduino Starter Kit Tutorial
+ * Color Mixing Lamp   (photoresistor)
+ */
+ //TODO: Add Comments & use more descriptive names
+const int rOut = 10;
 const int gOut = 9;
-const int bOut = 10;
+const int bOut = 11;
 
 const int rIn = A0;
 const int gIn = A1;
@@ -32,9 +35,13 @@ void loop() {
   bRaw = analogRead(bIn);
   delay(5);
   
-  red = rRaw/4;
-  green = gRaw/4;
-  blue = bRaw/4;
+  red = rRaw/4 - 50;
+  green = gRaw/4 - 50;
+  blue = bRaw/4 - 50;
+  
+  if (red < 0) { red = 0; }
+  if (green < 0) { green = 0; }
+  if (blue < 0) { blue = 0; }
   
   analogWrite(rOut, red);
   analogWrite(gOut, green);
