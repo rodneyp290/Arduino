@@ -1,0 +1,33 @@
+http://en.wikipedia.org/wiki/HSL_and_HSV#Hue_and_chroma
+
+C = M - m, M = max(R,G,B) & m = min(R,G,B)
+	   M = max(255, 135, 82) & m = max(255, 135, 82)
+C = 255 - 82 = 173 
+
+
+
+When M = R,
+    H' = ((G-B)/C) mod 6
+    H' = ((135-82)/173) mod 6
+    H' = (53/173) mod 6
+    H' = ~0.3064
+
+H = H' * 60
+H = ~18
+
+
+C = M - m, M = max(R,G,B) & m = min(R,G,B)
+	   M = max(255, 61, 151) & m = max(255, 61, 151)
+C = 255 - 61 = 194 
+
+
+
+When M = R,
+    H' = ((G-B)/C) mod 6
+    H' = ((61-151)/194) mod 6
+    H' = (-90/194) mod 6
+    H' = ~-0.4639 mod 6 // Effectively + 6 is this case
+    H' = ~5.5361
+
+H = H' * 60
+H = ~332

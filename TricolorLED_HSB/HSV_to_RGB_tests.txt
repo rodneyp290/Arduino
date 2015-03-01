@@ -1,0 +1,14 @@
+http://en.wikipedia.org/wiki/HSL_and_HSV#From_HSV
+
+C = V * S
+H' = H/60
+X = C*(1-|H' mod 2 -1|)
+
+		 
+		/ (C, X, 0), if 0 <= H' < 1
+		| (X, C, 0), if 1 <= H' < 2
+		| (0, C, X), if 2 <= H' < 3
+(R', G', B') = {  (0, X, C), if 3 <= H' < 4
+		| (X, 0, C), if 4 <= H' < 5
+		| (C, 0, X), if 5 <= H' < 6
+		\ (0, 0, 0), if H is undefined (ie. C = 0)
