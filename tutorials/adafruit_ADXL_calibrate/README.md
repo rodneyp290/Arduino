@@ -5,6 +5,7 @@ Guide used: [ADXL335, ADXL326 and ADXL377 Accelerometer Quickstart](https://lear
 
 Equipment used:
 * Arduino Uno
-* ADXL335 (and accompanying pins)
+* ADXL335 ([datasheet](http://www.analog.com/en/products/mems/mems-accelerometers/adxl335.html#product-overview))
+  (and accompanying pins) 
 * Breadboard
 * Wires
